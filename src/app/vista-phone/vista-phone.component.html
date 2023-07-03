@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+
+</head>
+
+<body>
+  <main class="container">
+    <div class="row">
+      <div class="col ps-0 pe-0">
+        <header class="header">
+          <img src="./assets/images/illustration-sign-up-mobile.svg" alt="ilustration">
+
+        </header>
+        <!-- Sign-up form start -->
+        <div class="col md-6">
+          <div class="side2 text-start ps-3 pe-3">
+
+            <h1 class="title1 mt-4">Stay updated!</h1>
+
+            <h6 class="title2 mt-4 ">Join 60,000+ product managers receiving monthly updates on:</h6>
+
+            <div class="textos mt-4">
+
+              <div class="d-flex text-start pe-3 parrafo">
+                <img src="./assets/images/icon-list.svg" alt="icon-list" class="list1">
+                <span class="prod1 ms-2">Product discovery and building what matters</span><br>
+              </div>
+
+              <div class="d-flex text-start pe-3 parrafo mt-2">
+                <img src="./assets/images/icon-list.svg" alt="icon-list" class="list1">
+                <span class="prod1 ms-2">Measuring to ensure updates are a success</span><br>
+              </div>
+
+              <div class="d-flex text-start pe-3 parrafo mt-2">
+                <img src="./assets/images/icon-list.svg" alt="icon-list" class="list1">
+                <span class="prod1 ms-2">And much more!</span><br>
+              </div>
+
+            </div>
+
+            <form class="formulario mt-5" action="">
+              <p class="mail mb-2">Email address </p>
+              <input class="email mb-4" id="email" placeholder="email@company.com" [(ngModel)]="mail">
+              <div *ngIf="email === ''" class="error-message">Please enter an email address</div>
+
+              <button class="newsletter" type="submit" [disabled]="email === ''" (click)="onSubmit()">Subscribe to monthly newsletter</button>
+
+            </form>
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+</body>
+
+</html>
