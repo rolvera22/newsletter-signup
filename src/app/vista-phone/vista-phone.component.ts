@@ -14,19 +14,18 @@ import { EmailserviceService } from '../emailservice.service';
 export class VistaPhoneComponent {
 
 email!:string;
-mail!:string;
 
 constructor (private router: Router , private emailService:EmailserviceService) {}
 
 
 onSubmit() {
-
-  if (this.email === '') {
+console.log ("submision")
+  if (!this.email) {
     return; 
   }
 
   this.router.navigate(['/success']);
-  this.emailService.email = (document.getElementById ('email') as HTMLInputElement).value;
+  this.emailService.email = this.email;
   
   
 

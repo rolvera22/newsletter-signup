@@ -19,6 +19,7 @@ font-family: 'Roboto', sans-serif;
 .container{
 
 max-width: 375px;
+background-color: white;
 
 }
 
@@ -66,7 +67,54 @@ body{
     justify-content: center;
     align-items: center;
 }
-   
+
+.error-message {
+    color: red;
+    font-size: 13px;
+    margin-top: 5px;
+  }
     
+@media screen and (min-width: 1000px){
+
+.imagenHeader{
+
+display: none;
+
+
+
+}
+
+.container {
+
+  width: 100%;  
+  max-width: 1000px;
+  border-radius: 12px;
   
+}
+
+body{
+
+background-color: hsl(234, 29%, 20%);
+height: 100vh;
+}
+
+.imagenNueva {
+    display: block; /* Mostrar la imagen nueva solo en pantallas mayores a 1000px */
+    width: 100%; /* Ajustar la imagen al ancho completo de la columna */
+    height: auto; /* Ajustar la altura de la imagen proporcionalmente */
+    padding:20px
+  }
+
+  .row {
+
+    flex-direction: row;
+
+  }
+
+  .col-lg-6 {
+    flex: 1; /* Distribuye el espacio en 2 partes iguales */
+  }
+
+
+}
 
